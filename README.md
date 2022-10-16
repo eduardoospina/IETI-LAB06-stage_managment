@@ -37,7 +37,6 @@
 
 ![](https://i.postimg.cc/ydB13VNy/state-managment-7.png)
 
-![](https://i.postimg.cc/X7XVC1nm/state-managment-8.png)
 
     7) Add the following code ( Don't pay much atention to it for now, this code will install and update whenever is required a Service Worker for your application to cache resources, for it to have a similar behaviour as native apps ):
 
@@ -115,6 +114,8 @@
     				    }
     		    </script>
         </body>
+
+![](https://i.postimg.cc/X7XVC1nm/state-managment-8.png)
 
     9) Create a file inside src called serviceWorkerRegistration.js with the same content as the repo has ( Code is not relevant for now, the only thing that matter for now is that theres a function implemented to register your service worker and configure cache )
    
