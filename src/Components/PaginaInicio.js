@@ -22,6 +22,28 @@ function PaginaInicio() {
             settasks(datas);
           });
       }
+
+      const { state, dispatch } = useContext(ThemeContext);
+  //Theme:
+  const toggleSwitch = document.querySelector(
+    '.theme-switch input[type="checkbox"]'
+  );
+  const currentTheme = state;
+  if (currentTheme) {
+    if (currentTheme === "dark") {
+      toggleSwitch.checked = true;
+    }
+  }
+
+  function switchTheme(e) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      dispatch("SET_DARK_MODE");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      dispatch("SET_LIGHT_MODE");
+    }
+  }
   
     return (
         <Grid id = "gridid2" align='center'>

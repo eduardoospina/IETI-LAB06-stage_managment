@@ -13,6 +13,7 @@ function Login () {
     const [password, setPassword] = useState('');
     const [auth, setAuth] = useState({auth : false});
     const [error, setError] = useState({error : false});
+    const { state, dispatch } = useContext(ThemeContext);
 
     const [submit, setSubmit] = useState({submit : false});
     const url = 'http://localhost:8080/api/auth';
@@ -40,7 +41,7 @@ function Login () {
     },[submit]);
 
     return (
-        <div id = "backgroundid">
+        <div id = "backgroundid" className={`home-${state.isDarkMode ? "dark" : "light"}`}>
             <Grid id = "gridid" align='center'>
                 <Paper elevation={10} id = "paperid">
                     <Avatar id = "avatarid">Eci Task</Avatar>
@@ -104,5 +105,6 @@ let FetchPOST = async (requestParams) => {
     }
     return {res,data,error}
 }
+
 
 export default Login;
