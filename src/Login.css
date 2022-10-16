@@ -1,0 +1,44 @@
+#paperid{
+    padding: 20px;
+    height: 70vh;
+    width: 40vh;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #aaccee;
+}
+
+#avatarid{
+    background-color: crimson;
+    height: 8vh;
+    width: 8vh;
+    margin: auto;
+}
+
+#h2id{
+    margin: auto;
+    height: 6vh;
+    width: 20vh;
+}
+
+#gridid{
+    justify-content: center;
+
+}
+
+
+#emailid{
+    background-color: snow;
+    height: 2vh;
+    width: 20vh;
+}
+
+#passwordid{
+    background-color: snow;
+    height: 2vh;
+    width: 20vh;
+
+}
+
+body {
+    background-image: url(https://i.postimg.cc/bN8tmVq1/berynbfvbdsfr.png);
+}
