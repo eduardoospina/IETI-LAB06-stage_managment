@@ -10,15 +10,34 @@
 
     1) Run your application ( npm start )
 
+![](https://i.postimg.cc/hP09XjPp/state-managment-1.png)
+
     2) Open localhost:3000 and then go to the Lighthouse Tab
+
+![](https://i.postimg.cc/7P3zR67w/state-managment-2.png)
+
+![](https://i.postimg.cc/sgXZ14Lg/state-managment-3.png)
 
     3) leave the configuration as the next image shows:
 
+![](https://i.postimg.cc/mDQPKXP8/state-managment-4.png)
+
     4) Click on Generate report and wait for the browser to create the report.
+
+![](https://i.postimg.cc/Y0Mv76gk/state-managment-4-5.png)
+
+![](https://i.postimg.cc/Wz8h1d6Z/state-managment-5.png)
 
     5) Let's create a new Service Worker to address the install issue
 
+![](https://i.postimg.cc/28XS9RHC/state-managment-6.png)
+
+
     6) Create a file called worker.js inside the public folder of your project
+
+![](https://i.postimg.cc/ydB13VNy/state-managment-7.png)
+
+![](https://i.postimg.cc/X7XVC1nm/state-managment-8.png)
 
     7) Add the following code ( Don't pay much atention to it for now, this code will install and update whenever is required a Service Worker for your application to cache resources, for it to have a similar behaviour as native apps ):
 
@@ -73,6 +92,8 @@
     	    );
         });
 
+
+
     8) Add the following script to your index.html, to check if the browser supports service workers ( if not it won't be installed ):
 
         <body>
@@ -96,12 +117,18 @@
         </body>
 
     9) Create a file inside src called serviceWorkerRegistration.js with the same content as the repo has ( Code is not relevant for now, the only thing that matter for now is that theres a function implemented to register your service worker and configure cache )
-    
+   
+![](https://i.postimg.cc/X7T0yVHB/state-managment-8-5.png)
+ 
     10) Update your src/index.js, add at the end of the file serviceWorker.register(). also import it as import * as serviceWorker from './serviceWorkerRegistration'
+
+![](https://i.postimg.cc/vTcpcj5v/state-managment-9.png)
 
     11) Reload your application, run npm start again
 
     12) Run a LightHouse report, now your app should be able to be installed on a mobile
+
+![](https://i.postimg.cc/9QGsRyws/state-managment-10.png)
 
 Part 2: State Management
 
