@@ -1,0 +1,9 @@
+.button-dark {
+	background: black;
+	color: white;
+}
+
+.button-light {
+	background: white;
+	color: black;
+}

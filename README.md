@@ -137,6 +137,9 @@ Part 2: State Management
 
     	export const ThemeContext = createContext(null);
 
+![](https://i.postimg.cc/MGqvkb8D/state-managment-11.png)
+
+
     2) Create on src/ a file called utils.js, where you're going to allocate your reducer and initialState object, to be used on your App.js file useReducer params:
 
         export  const  initialState = { isDarkMode:  false };
@@ -157,6 +160,8 @@ Part 2: State Management
 
          const [state, dispatch] = useReducer(themeReducer, initialState);
 
+![](https://i.postimg.cc/8c2zZLHL/state-managment-12.png)
+
     4) Wrap your JSX Content inside a your Context Provider (Which in this case would be ThemeContext.Provider):
 
         return (
@@ -168,6 +173,8 @@ Part 2: State Management
     5) Note that the Button component is just an example, you would have there probably your router configuration or something else, wrap everything on your Provider Component.
 
     6) Notice i just passed down to child components 2 values, state (which has the current state for the app's theme) and dispatch ( Which is a function to call when you want to update the global state, which in this case would be the selected theme, it receives as a parameter an action, which were defined on the reducer function we created on step 2 )
+
+![](https://i.postimg.cc/bNnJsFyg/state-managment-13.png)
 
     7) Now, on your specific component ( Which in my case is Button ) make a call to useContext to get the context values:
 
@@ -187,6 +194,8 @@ Part 2: State Management
 
         className={`button-${state.isDarkMode ? "dark" : "light"}`} 
 
+![](https://i.postimg.cc/Jhr4YrbY/state-managment-14.png)
+
     10) Now, you might wonder how to create those classes, here's a quick sneak peak:
 
         .button-dark {
@@ -200,6 +209,7 @@ Part 2: State Management
         }
 
 
+![](https://i.postimg.cc/t4sCKqJB/state-managment-15.png)
 
 
 # Getting Started with Create React App
